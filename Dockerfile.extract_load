@@ -1,0 +1,6 @@
+FROM postgres:12
+
+COPY extract_and_load.sh /usr/local/bin/
+RUN chmod +x /usr/local/bin/extract_and_load.sh
+
+CMD ["extract_and_load.sh"]
